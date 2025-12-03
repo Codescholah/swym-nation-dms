@@ -30,6 +30,7 @@ public class Attendance {
     private LocalDateTime modifiedOn;
 
     public Attendance() {
+        this.attendanceDate = LocalDateTime.now();
         this.modifiedOn = LocalDateTime.now();
     }
 
