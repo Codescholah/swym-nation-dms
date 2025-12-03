@@ -1,0 +1,13 @@
+# Ignore the "target" folder (where Maven builds your app)
+target/
+
+# Ignore compiled Java class files
+*.class
+
+# Ignore Replit/IDE specific settings (so you don't overwrite your friends' settings)
+.replit
+.id
+.idea/
+*.iml
+.vscode/
+.DS_Store
