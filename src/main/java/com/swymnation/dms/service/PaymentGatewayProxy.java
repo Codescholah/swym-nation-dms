@@ -12,7 +12,15 @@ public interface PaymentGatewayProxy {
 class MockPaymentGateway implements PaymentGatewayProxy {
     @Override
     public String initiatePayment(Client client) {
-        System.out.println("MOCK GATEWAY: Processing payment for " + client.getEmail());
-        return "TXN-" + System.currentTimeMillis();
+        // Step 1: Log the start
+        System.out.print("MOCK GATEWAY: Processing payment for " + client.getEmail() + " ... ");
+        
+        // Step 2: Generate the ID
+        String transactionId = "TXN-" + System.currentTimeMillis();
+        
+        // Step 3: Log the completion (This is the "progress" you want to see)
+        System.out.println("[SUCCESS] Payment Complete. ID: " + transactionId);
+        
+        return transactionId;
     }
 }
